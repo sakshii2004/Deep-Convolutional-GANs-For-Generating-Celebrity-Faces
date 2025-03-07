@@ -63,28 +63,6 @@ Ensure you have Python and the required libraries installed:
 pip install torch torchvision numpy matplotlib
 ```
 
-### **Training the Model**
-Run the training script:
-```python
-python train.py
-```
-This will:
-- Train the DCGAN model for 10 epochs.
-- Save generated images in `fake_images_epoch_X.png`.
-- Save the trained model weights.
-
-### **Saving and Loading Models**
-To save the trained models:
-```python
-torch.save(generator.state_dict(), "generator.pth")
-torch.save(discriminator.state_dict(), "discriminator.pth")
-```
-To load them later:
-```python
-generator.load_state_dict(torch.load("generator.pth"))
-discriminator.load_state_dict(torch.load("discriminator.pth"))
-```
-
 ## Expected Outputs
 - **Early epochs**: Generated images may appear noisy and unrealistic.
 - **Later epochs**: Faces start forming with clearer features.
